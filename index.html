@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
 </head>
 <body>
+    <div id="loader-wrapper">
+        <div class="loader-heart"></div>
+    </div>
     <div id="flipbook">
         <div class="hard cover">
             <div class="heart">
@@ -205,16 +208,6 @@
             width: 400,
             height: 300,
             autoCenter: true
-        });
-
-        $("#yes").click(function(){
-            var radioName = $(this).attr("name");
-            $(":radio[name='"+radioName+"']").attr("disabled", true);
-            window.alert("Yeeeee ehe dah gabisa diganti")
-        });
-
-        $("#no").click(function(){
-            window.alert("Yahhh :(")
         });
     </script>
 </body>

@@ -1,42 +1,51 @@
+$(document).ready(function(){
+    setTimeout(function(){
+        $('#loader-wrapper').css('display','none');
+    }, 2500);
+});
+
+$("#yes").click(function(){
+    var radioName = $(this).attr("name");
+    $(":radio[name='"+radioName+"']").attr("disabled", true);
+    window.alert("Yeeeee ehe dah gabisa diganti")
+});
+
+$("#no").click(function(){
+    window.alert("Yahhh :(")
+});
 
 function magicWheel(){
     var x= 1024;
     var b = 9999;
     var deg = Math.floor(Math.random()*(x-b))+b;
-    document.getElementById('sa').style.transform = "rotate("+deg+"deg)";
+    $('#sa').css('transform', "rotate("+deg+"deg)");
     setTimeout(()=>{
-        document.getElementById('wheeltxt').style.opacity = '1'
+        $('#wheeltxt').css('opacity', '1')
     }, 3500)
 }
 
 function animateStart(){
-    document.getElementById("apaan").innerHTML = '<small>5 things about you</small>'
-    document.getElementById("u1").style.transform = 'translate(-107.5%, -150%)'
-    document.getElementById("u1").style.cursor = 'auto'
-    document.getElementById("u2").style.transform = 'translate(7.5%, -150%)'
-    document.getElementById("u3").style.transform = 'translate(-140%, -37.5%)'
-    document.getElementById("u4").style.transform = 'translate(40%, -37.5%)'
-    document.getElementById("u5").style.transform = 'translate(-50%, 40%)'
+    $("#apaan").html('<small>5 things about you</small>')
+    $("#u1").css("transform", "translate(-107.5%, -150%)")
+    $("#u1").css("cursor", "auto")
+    $("#u2").css("transform", "translate(7.5%, -150%)")
+    $("#u3").css("transform", "translate(-140%, -37.5%)")
+    $("#u4").css("transform", "translate(40%, -37.5%)")
+    $("#u5").css("transform", "translate(-50%, 40%)")
 
-    
-    document.getElementById("u1").addEventListener("mouseover", ()=>{
-        document.getElementById('apaantxt').innerText = "Smile";
+    $("#u1").mouseover(()=>{
+        $("#apaantxt").text("Smile");
     }); 
-    document.getElementById("u2").addEventListener("mouseover", ()=>{
-        document.getElementById('apaantxt').innerText = "Compassion";
+    $("#u2").mouseover(()=>{
+        $("#apaantxt").text("Compassion");
     }); 
-    document.getElementById("u3").addEventListener("mouseover", ()=>{
-        document.getElementById('apaantxt').innerText = "Kindness";
+    $("#u3").mouseover(()=>{
+        $("#apaantxt").text("Kindness");
     }); 
-    document.getElementById("u4").addEventListener("mouseover", ()=>{
-        document.getElementById('apaantxt').innerText = "Loyalty";
+    $("#u4").mouseover(()=>{
+        $("#apaantxt").text("Loyalty");
     }); 
-    document.getElementById("u5").addEventListener("mouseover", ()=>{
-        document.getElementById('apaantxt').innerText = "Honesty";
+    $("#u5").mouseover(()=>{
+        $("#apaantxt").text("Honesty");
     }); 
 }
-
-// document.getElementById("u1").onmouseover() = function(){
-//     document.getElementById("apaantxt").innerHTML = "Your smile"
-// }
-

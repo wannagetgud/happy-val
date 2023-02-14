@@ -18,6 +18,63 @@ body{
     overflow: hidden;
 }
 
+#loader-wrapper{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    background-color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader-heart{
+    position: relative;
+    width: 100px;
+    height: 90px;
+    margin-top: 10px;
+    animation: jump 4s infinite;
+}
+
+@keyframes jump{
+    0% {transform: scale(0.1);}
+    25% {transform: scale(0.75);}
+    50% {transform: scale(0.5);}
+    75% {transform: scale(0.75);}
+    100% {transform: scale(0.5);}
+}
+
+.loader-heart::before{
+    position: absolute;
+    content: "";
+    left: 50px;
+    top: 0;
+    width: 52px;
+    height: 80px;
+    background: red;
+    border-radius: 50px 50px 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+    left: 50px;
+}
+
+.loader-heart::after{
+    position: absolute;
+    content: "";
+    left: 50px;
+    top: 0;
+    width: 52px;
+    height: 80px;
+    background: red;
+    border-radius: 50px 50px 0 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+    left: 0;
+}
+
 .cover{
     background: url('./images/coverbg.jpg') no-repeat;
     display: flex;
