@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    outline: none;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('./images/bg.jpg') no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.cover{
+    background: url('./images/coverbg.jpg') no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-shadow: inset 0 0 8px black;
+}
+
+.cover .heart{
+    clip-path: path("M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z");
+    transform: scale(5);
+    background: #ff5252;
+    height: 24px;
+    width: 24px;
+    font-size: medium;
+}
+
+.cursive{
+    font-family: 'Pacifico', cursive;
+    font-size: large;
+}
+
+.poppins{
+    font-family: 'Poppins', sans-serif;
+}
+
+.halaman{
+    background-color: #FCFDFD;
+    box-shadow: inset 3px 0 3px black;
+}
+
+.paragraf{
+    padding: 12px 8px 0 8px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.satu img{
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    left: 50%;
+}
+
+.pilihan{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.pilihan label{
+    margin: 0 4px;
+}
+
+.center-img{
+    text-align: center;
+}
+
+.tiga img{
+    width: 80px;
+    height: 80px;
+}
+
+.empat img{
+    transform: scale(0.5);
+}
+
+#wheeltxt{
+    position: absolute;
+    top: 80%;
+    left: 15%;
+    opacity: 0;
+}
+
+.center-things{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.gap{
+    gap: 3rem;
+}
+
+.enam .paragraf{
+    padding-bottom: 2rem;
+}
+
+.bunga1{
+    width: 50%;
+}
+
+.bunga2{
+    width: 80%;
+}
+
+.bunga3, .bunga4{
+    width: 90%;
+}
+
+.delapan img, .sembilan img{
+    width: 60%;
+    height: 6rem;
+    padding: 12px 0;
+    object-fit: cover;
+}
+
+.kmituapa label{
+    font-size: small;
+    padding-left: 2em;
+    display: block;
+}
+
+.fivethings{
+    position: relative;
+    width: 65%;
+    height: 150px;
+    margin-top: 1em;
+}
+
+.u1, .u2, .u3, .u4, .u5{
+    width: 45px;
+    height: 45px;
+    background-image: linear-gradient(
+        to bottom,
+        rgb(119, 22, 44),
+        rgb(209, 33, 43),
+        rgb(250, 93, 73),
+        rgb(209, 33, 43),
+        rgb(250, 93, 73),
+        rgb(119, 22, 44)
+    );
+    border: 2px solid rgb(119, 22, 44);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.fivethings i{
+    display: inline-block;
+}
+
+.u1{
+    cursor: pointer;
+    z-index: 50;
+}
+
+audio{
+    width: 90%;
+    height: 2em;
+}
+/* WHEEL */
+.wheel{
+    height: 500px;
+    width: 500px;
+    position: relative;
+    transform: scale(0.3) translate(-100%, -67%);
+}
+
+
+.wheel:after{
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    content: "";
+    background: url('./images/arrow.png');
+    background-size: 32px;
+    right: -30px;
+    top: 50%;
+}
+
+.sa{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    border-radius: 50%;
+    border: 8px solid black;
+    overflow: hidden;
+    transition: all ease 5s;
+}
+
+span{
+    width: 50%;
+    height: 50%;
+    display: inline-block;
+    position: absolute;
+}
+
+.spa{
+    clip-path: polygon(0 92%, 100% 50%, 0 8%);
+    background-color: aquamarine;
+    top: 120px;
+    left: 0;
+
+}
+
+.spb{
+    clip-path: polygon(100% 92%, 0 50%, 100% 8%);
+    background-color: pink;
+    top: 120px;
+    right: 0;
+
+}
+
+.spc{
+    clip-path: polygon(50% 0, 8% 100%, 92% 100%);
+    background-color: violet;
+    left: 120px;
+    bottom: 0;
+
+}
+
+.spd{
+    clip-path: polygon(50% 100%, 92% 0, 8% 0);
+    background-color: gold;
+    right: 120px;
+    top: 0;
+
+}
+
+.sa2{
+    height: 100%;
+    width: 100%;
+    transform: rotate(-135deg);
+}
+
+span strong{
+    width: 65px;
+    height: 65px;
+    line-height: 65px;
+    border-radius: 50%;
+    font-size: 24px;
+    text-align: center;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.rotateWheel{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid black;
+    background-color: antiquewhite;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 8px;
+}
+
+.rotateWheel:active{
+    width: 50px;
+    height: 50px;
+    font-size: 10px;
+    transition: all;
+}
